@@ -318,12 +318,13 @@ short int ephem_close (void)
 {
    short int error = 0;
 
-   if (EPHFILE)
-   {
-      error =  (short int) fclose (EPHFILE);
-      free (BUFFER);
-   }
-   return error;
+      if (EPHFILE) 
+      { 
+        error = (short int) fclose (EPHFILE); 
+        EPHFILE = NULL; // new line, reset pointer 
+        free (BUFFER); 
+      } 
+      return error;
 }
 
 /********planet_ephemeris */
