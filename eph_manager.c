@@ -229,16 +229,23 @@ short int ephem_open (char *ephem_name,
 
       switch (denum)
       {
-         case 200:
+         case 102:
+			RECORD_LENGTH = 6184;
+         case 200: case: 202:
             RECORD_LENGTH = 6608;
             break;
-         case 403: case 405:
-         case 421:
+		 case 403: case 405: case 410: case 413: case 414:
+		 case 418: case 421: case 422: case 423: case 424:
+		 case 430: case 431: case 433: case 434: case 435:
+		 case 436: case 438: 
             RECORD_LENGTH = 8144;
             break;
          case 404: case 406:
             RECORD_LENGTH = 5824;
             break;
+		 case 432:
+			RECORD_LENGTH = 7504;
+			break;
 
 /*
    An unknown DE file was opened. Close the file and return an error
