@@ -231,6 +231,7 @@ short int ephem_open (char *ephem_name,
       {
          case 102:
 			RECORD_LENGTH = 6184;
+            break;
          case 200: case: 202:
             RECORD_LENGTH = 6608;
             break;
