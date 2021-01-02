@@ -238,7 +238,7 @@ short int ephem_open (char *ephem_name,
 		 case 403: case 405: case 410: case 413: case 414:
 		 case 418: case 421: case 422: case 423: case 424:
 		 case 430: case 431: case 433: case 434: case 435:
-		 case 436: case 438: 
+		 case 436: case 438: case 440: case 441:
             RECORD_LENGTH = 8144;
             break;
          case 404: case 406:
